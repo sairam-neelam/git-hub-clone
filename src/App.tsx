@@ -1,24 +1,84 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Header from "./components/Header/Header";
+import Tabs from "./components/Tabs/Tabs";
+import {
+  Book,
+  JournalBookmarkFill,
+  LayoutSidebar,
+  Star,
+  Box,
+} from "react-bootstrap-icons";
 
 function App() {
+  const tabs = [
+    {
+      id: 1,
+      title: (
+        <span className="tab-header">
+          <Book />
+          <span className="tab-title">Overview</span>
+        </span>
+      ),
+      content: <div>Content of Tab 1</div>,
+      width: 100,
+      disabled: true,
+    },
+    {
+      id: 2,
+      title: (
+        <span className="tab-header">
+          <JournalBookmarkFill />
+          <span className="tab-title">Repositories</span>
+        </span>
+      ),
+      content: <div>Content of Tab 2</div>,
+      width: 125,
+      disabled: false,
+    },
+    {
+      id: 3,
+      title: (
+        <span className="tab-header">
+          <LayoutSidebar />
+          <span className="tab-title">Projects</span>
+        </span>
+      ),
+      content: <div>Content of Tab 3</div>,
+      width: 100,
+      disabled: true,
+    },
+    {
+      id: 4,
+      title: (
+        <span className="tab-header">
+          <Box />
+          <span className="tab-title">Packages</span>
+        </span>
+      ),
+      content: <div>Content of Tab 4</div>,
+      width: 100,
+      disabled: false,
+    },
+    {
+      id: 5,
+      title: (
+        <span className="tab-header">
+          <Star />
+          <span className="tab-title">Stars</span>
+        </span>
+      ),
+      content: <div>Content of Tab 5</div>,
+      width: 100,
+      disabled: false,
+    },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="main-page">
+        <Tabs tabs={tabs} />
+      </div>
     </div>
   );
 }

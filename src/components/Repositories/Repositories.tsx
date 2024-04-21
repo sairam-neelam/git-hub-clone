@@ -7,6 +7,8 @@ import {
   fetchUserReposRequest,
 } from "../../store/Repositories/action";
 import { usersDataSelector } from "../../store/Repositories/selectors";
+import UserProfile from "../UserProfile/UserProfile";
+import RepoList from "../RepoList/RepoList";
 
 const Repositories = () => {
   const dispatch = useDispatch();
@@ -23,7 +25,10 @@ const Repositories = () => {
 
   return (
     <div className="tab-main-container">
-      <div className="tab-container">test</div>
+      <div className="tab-container">
+        <UserProfile />
+        <RepoList />
+      </div>
     </div>
   );
 };

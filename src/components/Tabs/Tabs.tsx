@@ -20,10 +20,6 @@ const TabsComponent: React.FC<TabsProps> = ({ tabs }) => {
   const tabsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    console.log(activeTabId);
-  }, [activeTabId]);
-
-  useEffect(() => {
     const updateTabs = () => {
       if (tabsRef.current) {
         const availableWidth = tabsRef.current.offsetWidth;
@@ -35,7 +31,6 @@ const TabsComponent: React.FC<TabsProps> = ({ tabs }) => {
         const tabElements = tabsRef.current.children;
 
         tabs.forEach((tab, index) => {
-          console.log(tabElements[index]?.getBoundingClientRect()?.width);
           const tabWidth =
             tab.width || tabElements[index]?.getBoundingClientRect()?.width;
           totalWidth += tabWidth;
@@ -87,7 +82,6 @@ interface DropdownProps {
 
 const DropdownMenu: React.FC<DropdownProps> = ({ tabs, setActiveTabId }) => {
   const change = (e: { target: { value: any } }) => {
-    console.log(e.target.value);
     setActiveTabId(String(e.target.value));
   };
 

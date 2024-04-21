@@ -17,3 +17,10 @@
 .tab-title {
   margin-left: 10px;
 }
+
+.chip {
+  background: #818181ad;
+  margin-left: 5px;
+  padding: 2px 3px;
+  border-radius: 32px;
+}

@@ -14,10 +14,12 @@
 
 .tab {
   padding: 5px;
+  font-weight: 400;
 }
 
 .tab.active {
   border-bottom: 2px solid orangered;
+  font-weight: 700;
 }
 
 /* .dropdown {

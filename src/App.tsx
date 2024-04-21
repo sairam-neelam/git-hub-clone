@@ -30,10 +30,11 @@ function App() {
         <span className="tab-header">
           <JournalBookmarkFill />
           <span className="tab-title">Repositories</span>
+          <span className="chip">25</span>
         </span>
       ),
       content: <div>Content of Tab 2</div>,
-      width: 125,
+      width: 150,
       disabled: false,
     },
     {
@@ -73,6 +74,7 @@ function App() {
       disabled: false,
     },
   ];
+
   return (
     <div className="App">
       <Header />

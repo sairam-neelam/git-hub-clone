@@ -26,6 +26,7 @@ export interface FetchUserDetailsSuccessPayload {
 
 export interface FetchUserReposSuccessPayload {
   data: {
+    id: number;
     name: string;
     description: string;
     private: boolean;

@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./UserProfile.css";
-import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { usersDataSelector } from "../../store/Repositories/selectors";
 import { People, Building, GeoAlt, Envelope } from "react-bootstrap-icons";
 
 const UserProfile = () => {
-  const dispatch = useDispatch();
   const userDetails = useSelector(usersDataSelector);
 
   useEffect(() => {

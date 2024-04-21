@@ -75,3 +75,23 @@
 .prof-info .detail-logo {
   margin-right: 10px;
 }
+
+@media (max-width: 768px) {
+  .user-profile-sidebar {
+    width: 100%;
+  }
+  .name-details {
+    display: flex;
+    align-items: center;
+  }
+  .user-image {
+    width: 100px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .user-image {
+    width: 75px;
+  }
+}

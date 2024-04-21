@@ -10,8 +10,12 @@ import {
   Box,
 } from "react-bootstrap-icons";
 import Repositories from "./components/Repositories/Repositories";
+import { useSelector } from "react-redux";
+import { userReposDataSelector } from "./store/Repositories/selectors";
 
 function App() {
+  const userRepoDetails = useSelector(userReposDataSelector);
+
   const tabs = [
     {
       id: 1,
@@ -31,7 +35,7 @@ function App() {
         <span className="tab-header">
           <JournalBookmarkFill />
           <span className="tab-title">Repositories</span>
-          <span className="chip">25</span>
+          <span className="chip">{userRepoDetails?.data.length}</span>
         </span>
       ),
       content: <Repositories />,

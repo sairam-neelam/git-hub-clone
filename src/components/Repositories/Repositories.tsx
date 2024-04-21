@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./Repositories.css";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { fetchUserDetailsRequest } from "../../store/Repositories/action";
+import {
+  fetchUserDetailsRequest,
+  fetchUserReposRequest,
+} from "../../store/Repositories/action";
 import { usersDataSelector } from "../../store/Repositories/selectors";
 
 const Repositories = () => {
@@ -11,6 +14,7 @@ const Repositories = () => {
 
   useEffect(() => {
     dispatch(fetchUserDetailsRequest());
+    dispatch(fetchUserReposRequest());
   }, []);
 
   useEffect(() => {

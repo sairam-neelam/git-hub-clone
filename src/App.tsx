@@ -9,6 +9,7 @@ import {
   Star,
   Box,
 } from "react-bootstrap-icons";
+import Repositories from "./components/Repositories/Repositories";
 
 function App() {
   const tabs = [
@@ -33,7 +34,7 @@ function App() {
           <span className="chip">25</span>
         </span>
       ),
-      content: <div>Content of Tab 2</div>,
+      content: <Repositories />,
       width: 150,
       disabled: false,
     },

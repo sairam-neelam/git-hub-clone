@@ -22,33 +22,14 @@
   font-weight: 700;
 }
 
-/* .dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown .dropbtn {
-  background-color: transparent;
+.tab-dropdown {
+  background: transparent;
   border: none;
-  cursor: pointer;
+  width: 20px;
+  color: #c9d1d9;
+  border-bottom: 1px solid #30363db3;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  z-index: 1;
+.tab-option .tab-header {
+  background-color: #222;
 }
-
-.dropdown-content .tab {
-  display: block;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.tab-content {
-  padding: 20px;
-} */

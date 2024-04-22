@@ -89,7 +89,12 @@ const DropdownMenu: React.FC<DropdownProps> = ({ tabs, setActiveTabId }) => {
     <div className="dropdown">
       <select className="tab-dropdown" onChange={change}>
         {tabs.map((tab) => (
-          <option key={tab.id} value={tab.id} disabled={tab.disabled}>
+          <option
+            key={tab.id}
+            value={tab.id}
+            disabled={tab.disabled}
+            className="tab-option"
+          >
             {tab.title}
           </option>
         ))}

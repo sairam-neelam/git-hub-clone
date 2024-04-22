@@ -64,7 +64,7 @@ function App() {
       ),
       content: <div>Content of Tab 4</div>,
       width: 100,
-      disabled: false,
+      disabled: true,
     },
     {
       id: 5,
@@ -76,7 +76,7 @@ function App() {
       ),
       content: <div>Content of Tab 5</div>,
       width: 100,
-      disabled: false,
+      disabled: true,
     },
   ];
 

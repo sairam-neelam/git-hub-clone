@@ -25,7 +25,8 @@
   align-items: center;
 }
 
-.hamburger {
+.hamburger,
+.inbox {
   background: transparent;
   color: grey;
   border: 1px solid grey;
@@ -45,4 +46,19 @@
 
 .github-icon {
   font-size: 32px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.inbox-icon {
+  font-size: 20px;
+}
+
+.user-avatar {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
 }

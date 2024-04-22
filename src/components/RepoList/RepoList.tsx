@@ -108,11 +108,14 @@ const RepoList = () => {
             <JournalBookmarkFill className="new-btn-icon" />
             New
           </button>
-          <input
-            className="search-input"
-            onChange={(e) => setSearchInput(e.target.value)}
-            placeholder="Find a repository..."
-          />
+          <div className="search-input-div">
+            <input
+              className="search-input"
+              onChange={(e) => setSearchInput(e.target.value)}
+              placeholder="Find a repository..."
+            />
+          </div>
+
           <div className="action-btn-container">
             <DropdownButton
               className="type-dropdown"

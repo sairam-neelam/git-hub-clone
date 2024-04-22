@@ -33,7 +33,7 @@ const RepoList = () => {
     <div className="repo-list-container">
       <div className="repo-inner-container">
         <div className="search-container">
-          <input placeholder="Find a repository..." />
+          <input className="search-input" placeholder="Find a repository..." />
         </div>
 
         <div className="list-container">

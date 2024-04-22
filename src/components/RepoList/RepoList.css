@@ -112,3 +112,19 @@
 .language .CSS {
   background-color: #563d7c;
 }
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  background: transparent;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  height: 32px;
+  padding: 5px 12px;
+  font-size: 14px;
+  width: 55%;
+  color: #c9d1d9;
+}

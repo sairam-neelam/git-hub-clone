@@ -24,21 +24,26 @@ export interface FetchUserDetailsSuccessPayload {
   msg: string;
 }
 
-export interface FetchUserReposSuccessPayload {
-  data: {
-    id: number;
+export interface Repo {
+  id: number;
+  name: string;
+  description: string;
+  private: boolean;
+  language: string;
+  updated_at: string;
+  stargazers_count: number;
+  forks_count: number | null;
+  archived: boolean;
+  mirror_url: string | null;
+  is_template: boolean;
+  license: {
+    key: string;
     name: string;
-    description: string;
-    private: boolean;
-    language: string;
-    updated_at: string;
-    stargazers_count: number | null;
-    forks_count: number | null;
-    license: {
-      key: string;
-      name: string;
-    };
-  }[];
+  };
+}
+
+export interface FetchUserReposSuccessPayload {
+  data: Repo[];
   success: boolean;
   msg: string;
 }

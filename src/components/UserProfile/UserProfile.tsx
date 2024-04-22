@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./UserProfile.css";
 import { useSelector } from "react-redux";
 import { usersDataSelector } from "../../store/Repositories/selectors";
@@ -6,10 +6,6 @@ import { People, Building, GeoAlt, Envelope } from "react-bootstrap-icons";
 
 const UserProfile = () => {
   const userDetails = useSelector(usersDataSelector);
-
-  useEffect(() => {
-    console.log(userDetails);
-  }, [userDetails]);
 
   return (
     <div className="user-profile-sidebar">

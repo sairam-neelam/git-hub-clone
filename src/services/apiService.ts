@@ -18,6 +18,7 @@ export const fetchUserRepos = async () => {
     return response.data;
   } catch (error) {
     console.error("Error fetching data:", error);
+    alert(error + "\n Please try again");
     throw error;
   }
 };

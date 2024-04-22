@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./RepoList.css";
 import { useSelector } from "react-redux";
-import { userReposDataSelector } from "../../store/Repositories/selectors";
+import {
+  userReposDataSelector,
+  usersDataSelector,
+} from "../../store/Repositories/selectors";
 import {
   Star,
   Diagram2,
@@ -15,6 +18,7 @@ import { Repo } from "../../store/Repositories/types";
 
 const RepoList = () => {
   const repoDetails = useSelector(userReposDataSelector);
+  const userDetails = useSelector(usersDataSelector);
   const [repoList, setRepoList] = useState<Repo[]>([]);
   const [searchInput, setSearchInput] = useState("");
   const [selectedTypeOption, setSelectedTypeOption] = useState("All");
@@ -28,7 +32,6 @@ const RepoList = () => {
   }, [repoDetails]);
 
   useEffect(() => {
-    console.log(selectedTypeOption);
     let searchList = repoDetails?.data?.filter((el) =>
       el.name.toLowerCase().includes(searchInput.toLowerCase())
     );
@@ -196,6 +199,11 @@ const RepoList = () => {
               </div>
             </div>
           ))}
+          {repoList.length == 0 && (
+            <div className="note-msg">
+              No repositories found. Please try again.
+            </div>
+          )}
         </div>
       </div>
     </div>

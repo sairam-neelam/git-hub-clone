@@ -176,6 +176,13 @@
   margin-right: 5px;
 }
 
+.note-msg {
+  width: 100%;
+  text-align: center;
+  color: #c9d1d9;
+  margin-top: 32px;
+}
+
 @media (max-width: 1200px) {
   .search-container {
     flex-direction: column;
